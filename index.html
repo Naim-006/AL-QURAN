@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    }
+    100% {
+        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    }
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+    animation: scaleUp 1s forwards ease-in-out;
+    width: 90%;
+    max-width: 400px;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.button-container {
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    animation: float 3s infinite ease-in-out;
+    width: 80%;
+    max-width: 300px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+button:hover {
+    background-color: #004c99;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    margin-top: 30px;
+}
+
+footer a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #004c99;
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Website</h1>
+        <div class="button-container">
+            <button onclick="location.href='qu.html'">Al Quran</button>
+            <button onclick="location.href='sp.html'">Specials</button>
+        </div>
+        <footer>
+            <a href="appinfo.html">App Info</a>
+        </footer>
+    </div>
+</body>
+</html>
